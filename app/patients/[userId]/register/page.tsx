@@ -1,7 +1,6 @@
-import RegisterForm from "@/components/forms/RegiseterForm";
+import RegisterForm from "@/components/forms/RegisterForm";
 import { getUser } from "@/lib/actions/patient.actions";
 import Image from "next/image";
-import Link from "next/link";
 
 const Register = async ({ params: { userId } }: SearchParamProps) => {
   const user = await getUser(userId);
@@ -20,10 +19,7 @@ const Register = async ({ params: { userId } }: SearchParamProps) => {
 
           <RegisterForm user={user} />
 
-          <p className="copyright py-12">
-            © 2024 CarePulse
-          </p>
-
+          <p className="copyright py-12">© 2024 CarePulse</p>
         </div>
       </section>
       <Image
